@@ -8,33 +8,52 @@ const { Campus, Student } = require('../models');  // Import database models
 // Seed database
 const seedDB = async () => {
 	// Create a new campus
+	const dummy_campus_5 = await Campus.create({
+		name: "A",
+		address: "",
+		description: "",
+		id: "0",
+	});
+
 	const dummy_campus = await Campus.create({
 		name: "Hunter College",
 		address: "695 Park Ave, New York, NY 10065",
-		description: "This is a school in New York, New York."
+		description: "This is a school in New York, New York.",
+		id: "1",
+
 	});
 	// Create a new campus
 	const dummy_campus2 = await Campus.create({
 		name: "Queens College",
 		address: "65-30 Kissena Blvd, Queens, NY 11367",
-		description: "This is a school in Queens, New York."
+		description: "This is a school in Queens, New York.",
+		id: "2",
+
 	});
 	// Create a new campus
 	const dummy_campus3 = await Campus.create({
 		name: "Brooklyn College",
 		address: "2900 Bedford Ave, Brooklyn, NY 11210",
-		description: "This is a school in Brooklyn, New York."
+		description: "This is a school in Brooklyn, New York.",
+		id: "3",
+
 	});
 	
 	// Create a new student for a campus
 	const dummy_student = await Student.create({
 		firstname: "Joe",
-      lastname: "Smith",
+      	lastname: "Smith",
+		email: "email@email.com",
+		imgUrl: "https://static.wikia.nocookie.net/unanything/images/c/cb/SpongeBob.png/revision/latest?cb=20230714221637",
+		gpa: 1
 	});
 	// Create a new student for a campus
 	const dummy_student2 = await Student.create({
 		firstname: "Mary",
-      lastname: "Johnson",
+      	lastname: "Johnson",
+		email: "email@email.com",
+		imgUrl: "https://static.wikia.nocookie.net/unanything/images/c/cb/SpongeBob.png/revision/latest?cb=20230714221637",
+		gpa: 1
 	});
 
 	// Add students to campuses
